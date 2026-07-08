@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1000" height="700" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Network-Lab — Virtual Enterprise Network</text>
+  <text x="500" y="65" text-anchor="middle" fill="#8b949e" font-size="14">broly.local domain</text>
+
+  <!-- Internet cloud -->
+  <ellipse cx="500" cy="110" rx="70" ry="30" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="500" y="116" text-anchor="middle" fill="#58a6ff" font-size="14" font-weight="bold">Internet</text>
+
+  <!-- Line internet to pfSense -->
+  <line x1="500" y1="140" x2="500" y2="190" stroke="#8b949e" stroke-width="2"/>
+  <text x="515" y="168" fill="#8b949e" font-size="12">WAN (NAT)</text>
+
+  <!-- pfSense box -->
+  <rect x="410" y="190" width="180" height="70" rx="8" fill="#1f6feb" stroke="#58a6ff" stroke-width="2"/>
+  <text x="500" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">pfSense CE</text>
+  <text x="500" y="240" text-anchor="middle" fill="#dbe4f0" font-size="12">Router / Firewall</text>
+
+  <!-- 3 lines down to VLANs -->
+  <line x1="500" y1="260" x2="200" y2="330" stroke="#8b949e" stroke-width="2"/>
+  <line x1="500" y1="260" x2="500" y2="330" stroke="#8b949e" stroke-width="2"/>
+  <line x1="500" y1="260" x2="800" y2="330" stroke="#8b949e" stroke-width="2"/>
+
+  <!-- Interface labels -->
+  <text x="290" y="290" fill="#f0883e" font-size="12" font-weight="bold">LAN</text>
+  <text x="510" y="300" fill="#f0883e" font-size="12" font-weight="bold">OPT1</text>
+  <text x="700" y="290" fill="#f0883e" font-size="12" font-weight="bold">OPT2</text>
+
+  <!-- VLAN10 ADMIN box -->
+  <rect x="70" y="330" width="260" height="200" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text x="200" y="358" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="bold">VLAN 10 — ADMIN</text>
+  <text x="200" y="376" text-anchor="middle" fill="#8b949e" font-size="12">192.168.10.0/24</text>
+  <text x="200" y="392" text-anchor="middle" fill="#8b949e" font-size="12">Gateway: 192.168.10.1</text>
+
+  <rect x="100" y="410" width="200" height="90" rx="6" fill="#21262d" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="200" y="435" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">DC01</text>
+  <text x="200" y="452" text-anchor="middle" fill="#c9d1d9" font-size="11">Windows Server 2019</text>
+  <text x="200" y="467" text-anchor="middle" fill="#c9d1d9" font-size="11">AD DS + DNS (broly.local)</text>
+  <text x="200" y="484" text-anchor="middle" fill="#79c0ff" font-size="11">192.168.10.10</text>
+
+  <!-- VLAN20 USERS box -->
+  <rect x="370" y="330" width="260" height="200" rx="10" fill="#161b22" stroke="#d29922" stroke-width="2"/>
+  <text x="500" y="358" text-anchor="middle" fill="#d29922" font-size="16" font-weight="bold">VLAN 20 — USERS</text>
+  <text x="500" y="376" text-anchor="middle" fill="#8b949e" font-size="12">192.168.20.0/24</text>
+  <text x="500" y="392" text-anchor="middle" fill="#8b949e" font-size="12">Gateway: 192.168.20.1</text>
+
+  <rect x="400" y="410" width="200" height="90" rx="6" fill="#21262d" stroke="#d29922" stroke-width="1.5"/>
+  <text x="500" y="435" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Client01</text>
+  <text x="500" y="452" text-anchor="middle" fill="#c9d1d9" font-size="11">Windows 10 Enterprise</text>
+  <text x="500" y="467" text-anchor="middle" fill="#c9d1d9" font-size="11">Domain-joined (BROLY\\tuser)</text>
+  <text x="500" y="484" text-anchor="middle" fill="#79c0ff" font-size="11">192.168.20.10</text>
+
+  <!-- VLAN30 SERVERS box -->
+  <rect x="670" y="330" width="260" height="200" rx="10" fill="#161b22" stroke="#f85149" stroke-width="2"/>
+  <text x="800" y="358" text-anchor="middle" fill="#f85149" font-size="16" font-weight="bold">VLAN 30 — SERVERS/DMZ</text>
+  <text x="800" y="376" text-anchor="middle" fill="#8b949e" font-size="12">192.168.30.0/24</text>
+  <text x="800" y="392" text-anchor="middle" fill="#8b949e" font-size="12">Gateway: 192.168.30.1</text>
+
+  <rect x="700" y="410" width="200" height="90" rx="6" fill="#21262d" stroke="#f85149" stroke-width="1.5"/>
+  <text x="800" y="435" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Ubuntu Server</text>
+  <text x="800" y="452" text-anchor="middle" fill="#c9d1d9" font-size="11">Ubuntu 24.04 LTS</text>
+  <text x="800" y="467" text-anchor="middle" fill="#c9d1d9" font-size="11">Apache Web Server</text>
+  <text x="800" y="484" text-anchor="middle" fill="#79c0ff" font-size="11">192.168.30.10</text>
+
+  <!-- Firewall policy legend -->
+  <rect x="70" y="570" width="860" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="500" y="595" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Firewall Policy</text>
+
+  <line x1="110" y1="615" x2="140" y2="615" stroke="#3fb950" stroke-width="3"/>
+  <text x="150" y="619" fill="#c9d1d9" font-size="12">ADMIN → ANY : full access (default)</text>
+
+  <line x1="110" y1="638" x2="140" y2="638" stroke="#3fb950" stroke-width="3"/>
+  <text x="150" y="642" fill="#c9d1d9" font-size="12">USERS → SERVERS (HTTP) &amp; USERS → ADMIN (DNS only) : allowed</text>
+
+  <line x1="110" y1="661" x2="140" y2="661" stroke="#f85149" stroke-width="3" stroke-dasharray="6,3"/>
+  <text x="150" y="665" fill="#c9d1d9" font-size="12">USERS → ADMIN (other) &amp; SERVERS → ADMIN : blocked</text>
+
+  <line x1="600" y1="615" x2="630" y2="615" stroke="#3fb950" stroke-width="3"/>
+  <text x="640" y="619" fill="#c9d1d9" font-size="12">SERVERS → Internet : allowed</text>
+</svg>
