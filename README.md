@@ -58,7 +58,7 @@ The network is split into 3 VLANs (Admin, Users, Servers/DMZ), routed and firewa
 ![Firewall Rules - Servers VLAN](images/07-firewall-rules-servers.png)
 ![Connectivity Test Results](images/08-test-netconnection-results.png)
 ![Apache Page Loaded From Client](images/09-apache-page-from-client.png)
-![Packet Capture](images/10-packet-capture.png)
+![Packet Capture](images/10-sconfig-settings.png)
 
 ### Segmentation test results
 
