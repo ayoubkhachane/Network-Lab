@@ -31,7 +31,7 @@ The network is split into 3 VLANs (Admin, Users, Servers/DMZ), routed and firewa
   - Users → allowed DNS (to Admin) and HTTP (to Servers), blocked from everything else on Admin
   - Servers → blocked from Admin, allowed outbound internet access
 
-![Network Diagram](images/network-diagram.png)
+![Network Diagram](images/network-diagram.svg)
 
 ---
 
