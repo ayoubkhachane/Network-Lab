@@ -110,7 +110,6 @@ Captured on pfSense's USERS interface (em2) while browsing from the Windows 10 c
 ## Challenges
 
 - **Netgate's installer no longer ships separate CE ISOs.** The unified Netgate Installer defaults toward pfSense Plus during the subscription validation step — had to explicitly select "Install CE" to stay on the free Community Edition.
-- **Arabic AZERTY keyboard layout mismatch** during Windows Server and Windows 10 setup caused garbled password input (typed characters didn't match what appeared). Resolved by selecting the correct keyboard layout at the Windows Setup language screen, and by using VMware Tools for reliable copy-paste once installed.
 - **AD DS promotion stalled for over an hour** on a 2GB RAM VM. Diagnosed via host Task Manager and VM responsiveness checks, then resolved by bumping the VM to 3GB RAM and reinstalling cleanly with VMware Tools already in place.
 - **pfSense blocks all traffic on new OPT interfaces by default**, including traffic to the firewall's own IP (e.g. a simple ping to the gateway) — not just genuinely public traffic. Learned to use `easyrule` from the console for quick fixes, and the GUI for permanent, ordered rules.
 - **Rule ordering matters.** pfSense evaluates firewall rules top-to-bottom with first-match-wins. A Block rule placed above a Pass rule silently overrides it — had to learn to drag-reorder rules in the GUI and verify actual behavior with `pfctl -sr` rather than trusting the rule list alone.
